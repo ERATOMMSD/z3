@@ -305,7 +305,9 @@ int STD_CALL main(int argc, char ** argv) {
         if (!g_input_file && !g_standard_input) {
             error("input file was not specified.");
         }
-        
+        /* start: written by ashiato45 */
+	TRACE("test", tout << "This is a test message of the trace system\n" << std::flush; );
+	/* end: */
         if (g_input_kind == IN_UNSPECIFIED) {
             g_input_kind = IN_SMTLIB_2;
             char const * ext = get_extension(g_input_file);
