@@ -250,6 +250,9 @@ void parse_cmd_line_args(int argc, char ** argv) {
                     error("option argument (-tr:tag) is missing.");
                 enable_trace(opt_arg);
             }
+	    else if (strcmp(opt_name, "trall") == 0){
+	      enable_all_trace(true);
+	    }
 #endif
 #ifdef Z3DEBUG
             else if (strcmp(opt_name, "dbg") == 0) {
